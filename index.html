@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Test</title>
+</head>
+<body>
+  
+  <form name="copyright" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="CopyrightForm">
+    
+    <div class="formDetails">
+      <label for="imageTitle">Title of Image in Question</label><br />
+      <input
+        type="text"
+        name="imageTitle"
+        id="imageTitle"
+        placeholder="Enter Image Title"
+        required
+      /><br />
+      <label for="additionalComments">Additional Comments</label><br />
+      <textarea
+        id="additionalComments"
+        name="additionalComments"
+        placeholder="Enter Additional Comments"
+        required
+      ></textarea><br />
+      <label for="additionalComments"
+        >Would you like this image removed from the site?</label
+      ><br />
+      <input
+        type="radio"
+        id="yesOption"
+        name="deleteOption"
+        value="yes"
+        required
+      />
+      <label for="yesOption">Yes</label>
+      <input type="radio" id="noOption" name="deleteOption" value="no" />
+      <label for="noOption">No</label>
+    </div>
+      
+    <div class="submitBar">
+      <div class="cancelBtn" on:click={toggleContactForm}>Cancel</div>
+      <button class="submitBtn" type="submit">Submit</button>
+    </div>
+  </form>
+
+</body>
+</html>
